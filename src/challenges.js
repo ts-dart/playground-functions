@@ -61,8 +61,44 @@ function highestCount(l) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let cont = 0;
+  let cont2 = 0;
+
+  //caucula a distancia e se a ordem e crescente ou decrecente 
+  if (mouse > cat1) {
+    for (let index = cat1; index <= mouse; index += 1) {
+      cont += 1;
+    }
+  }
+  else if (mouse < cat1) {
+    for (let index = cat1; index >= mouse; index -= 1) {
+      cont += 1;
+    }
+  }
+
+  if (mouse > cat2) {
+    for (index = cat2; index <= mouse; index += 1) {
+      cont2 += 1;
+    }
+  }
+  else if (mouse < cat2) {
+    for (index = cat2; index >= mouse; index -= 1) {
+      cont2 += 1;
+    }
+  }
+  
+  //qual gato ta mais perto
+  if (cont < cont2) {
+    return "cat1";
+  }
+  else if (cont > cont2) {
+    return "cat2";
+  }
+  else if (cont === cont2) {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
