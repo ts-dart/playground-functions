@@ -33,13 +33,31 @@ function concatName(l) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let winsPoints = wins * 3;
+  let tiesPoints = ties * 1;
+  return winsPoints + tiesPoints;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(l) {
   // seu código aqui
+  let maior = l[0];
+  let resp = [];
+
+  for (let index of l) {
+    if (index > maior) {
+      maior = index;
+    }
+  }
+
+  for (let index2 of l) {
+    if (index2 === maior) {
+      resp.push(index2);
+    }
+  }
+  return resp.length;
 }
 
 // Desafio 7
