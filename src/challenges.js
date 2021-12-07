@@ -124,9 +124,18 @@ function fizzBuzz(l) {
 }
 
 // Desafio 9
-function encode() {
+function encode(s) {
   // seu código aqui
+  for (index = 0; index < s.length; index += 1) {
+    let vi = s[index];
+    if (vi == "lowercase") {
+      return true;
+    }
+  }
 }
+
+console.log(encode("Amarelo"));
+
 function decode() {
   // seu código aqui
 }
