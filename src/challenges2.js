@@ -1,12 +1,12 @@
 // Desafio 10
-function techList(a, n) {
+function techList(a, name) {
   // seu código aqui
   let lista = a.sort();
   let listaObj = [];
 
   if (lista.length > 0){
     for (var index = 0; index < lista.length; index += 1) {
-      listaObj.push({tach: lista[index], name: n});
+      listaObj.push({tech: lista[index], name: name});
     }
   }
   else {
