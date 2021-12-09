@@ -17,8 +17,12 @@ function techList(a, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(lista) {
   // seu código aqui
+  let telNumber = "";
+  for (index = 0; index < lista.length; index += 1) {
+    telNumber += lista[index];
+  }
 }
 
 // Desafio 12
