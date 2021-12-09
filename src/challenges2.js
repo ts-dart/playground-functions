@@ -30,9 +30,39 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let numbers = [];
+  let coposDeAgua = 0;
+  let suggestion;
+
+  for (index = 0; index < string.length; index += 1) {
+    let valLoop = string[index];
+
+    for (index2 = 0; index2 < 10; index2 += 1) {
+      if (valLoop == index2) {
+        numbers.push(valLoop);
+      }
+    }
+  }
+
+  for (index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] != " ") {
+      let n = parseInt(numbers[index]);
+      coposDeAgua += n;
+    }
+  }
+
+  if (coposDeAgua > 1) {
+    suggestion = `${coposDeAgua} copos de água`;
+  }
+  else {
+    suggestion = `${coposDeAgua} copo de água`;
+  }
+
+  return suggestion;
 }
+
 
 module.exports = {
   generatePhoneNumber,
