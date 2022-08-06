@@ -126,18 +126,32 @@ function fizzBuzz(l) {
 // Desafio 9
 function encode(s) {
   // seu código aqui
-  for (index = 0; index < s.length; index += 1) {
-    let vi = s[index];
-    if (vi == "lowercase") {
-      return true;
-    }
+  let encoded = s;
+
+  for (const i of s) {
+    if (i.includes('a')) encoded = encoded.replace('a', '1');
+    if (i.includes('e')) encoded = encoded.replace('e', '2');
+    if (i.includes('i')) encoded = encoded.replace('i', '3');
+    if (i.includes('o')) encoded = encoded.replace('o', '4');
+    if (i.includes('u')) encoded = encoded.replace('u', '5');
   }
+
+  return encoded;
 }
 
-console.log(encode("Amarelo"));
-
-function decode() {
+function decode(s) {
   // seu código aqui
+  let decoded = s;
+
+  for (const i of s) {
+    if (i.includes('1')) decoded = decoded.replace('1', 'a');
+    if (i.includes('2')) decoded = decoded.replace('2', 'e');
+    if (i.includes('3')) decoded = decoded.replace('3', 'i');
+    if (i.includes('4')) decoded = decoded.replace('4', 'o');
+    if (i.includes('5')) decoded = decoded.replace('5', 'u');
+  }
+
+  return decoded;
 }
 
 module.exports = {

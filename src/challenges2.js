@@ -17,13 +17,23 @@ function techList(a, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(lista) {
+function generatePhoneNumber(arr) {
   // seu código aqui
-  let telNumber = "";
-  for (index = 0; index < lista.length; index += 1) {
-    telNumber += lista[index];
-  }
+  if (arr.length !== 11) return 'Array com tamanho incorreto.';
+
+  const filtered = arr.filter(n => n < 0 || n > 9);
+  console.log(filtered);
+  if (filtered.length > 0) return 'não é possível gerar um número de telefone com esses valores';
+
+  for (const nR of arr) {
+    const numbers = arr.filter(n => nR === n);
+    if (numbers.length >= 3) return 'não é possível gerar um número de telefone com esses valores';
+  };
+  
+  return `(${arr[0]}${arr[1]}) ${arr[2]}${arr[3]}${arr[4]}${arr[5]}${arr[6]}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`
 }
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 0, 0, 0]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
