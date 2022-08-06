@@ -22,7 +22,6 @@ function generatePhoneNumber(arr) {
   if (arr.length !== 11) return 'Array com tamanho incorreto.';
 
   const filtered = arr.filter(n => n < 0 || n > 9);
-  console.log(filtered);
   if (filtered.length > 0) return 'não é possível gerar um número de telefone com esses valores';
 
   for (const nR of arr) {
