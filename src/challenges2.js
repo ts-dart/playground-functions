@@ -1,7 +1,7 @@
 // Desafio 10
-function techList(a, name) {
+function techList(ar, name) {
   // seu código aqui
-  let lista = a.sort();
+  let lista = ar.sort();
   let listaObj = [];
 
   if (lista.length > 0){
